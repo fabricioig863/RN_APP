@@ -3,30 +3,28 @@
         "es2021": true
     },
     "globals": {
-      "__DEV__":"readonly"
+      "_DEV_": "readonly"
     },
     "extends": [
-        "plugin:reat/recommended",
-        "airbnb",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:@typescript-eslint/recommend"
     ],
     "overrides": [
     ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
         "react",
-        "@typescript-eslint",
         "react-hooks"
     ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "react/jsx-filename-extensions": [1, { "extends": [".tsx"]}],
-      "import/prefer-deafault-export": "off",
+      "react/jsx-filename-extension": [1,{ "extension" : [".tsx"] }],
+      "import/prefer-default-export": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
