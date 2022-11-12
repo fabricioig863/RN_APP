@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import * as S from './styles';
 
 export function Header() {
   return (
-    <View>
-      <Text>Header</Text>
-    </View>
+    <S.Container>
+      <S.Title>Olá,</S.Title>
+      <S.SubTitle>Fabricio</S.SubTitle>
+    </S.Container>
   );
 }
