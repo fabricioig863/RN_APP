@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import * as S from './styles';
+import {HeaderProps} from './types';
 
-export function Header() {
+export function Header({name, title}: HeaderProps) {
   return (
-    <View>
-      <Text>Header</Text>
-    </View>
+    <S.Container>
+      <S.Title>{title}</S.Title>
+      <S.SubTitle>{name}</S.SubTitle>
+    </S.Container>
   );
 }
