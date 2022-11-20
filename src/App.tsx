@@ -5,7 +5,8 @@ import {Header} from './components/Header';
 const App = () => {
   return (
     <SafeAreaView>
-      <Header />
+      <Header name="Fabricio" title="Welcome to RN" />
+      <Header name="Ignacio" title="Olá," />
     </SafeAreaView>
   );
 };

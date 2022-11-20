@@ -1,11 +1,12 @@
 import React from 'react';
 import * as S from './styles';
+import {HeaderProps} from './types';
 
-export function Header() {
+export function Header({name, title}: HeaderProps) {
   return (
     <S.Container>
-      <S.Title>Olá,</S.Title>
-      <S.SubTitle>Fabricio</S.SubTitle>
+      <S.Title>{title}</S.Title>
+      <S.SubTitle>{name}</S.SubTitle>
     </S.Container>
   );
 }
