@@ -10,6 +10,6 @@ export const Title = styled.Text`
 `;
 
 export const SubTitle = styled.Text`
-  font-size: 15px;
+  font-size: 20px;
   color: black;
 `;
