@@ -1,13 +1,15 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {Header} from './components/Header';
+import {Home} from './screen/Home';
+import {ThemeWrapper} from './wrappers';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Header name="Fabricio" title="Welcome to RN" />
-      <Header name="Ignacio" title="Olá," />
-    </SafeAreaView>
+    <ThemeWrapper>
+      <SafeAreaView>
+        <Home />
+      </SafeAreaView>
+    </ThemeWrapper>
   );
 };
 

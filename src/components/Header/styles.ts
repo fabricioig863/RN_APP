@@ -6,10 +6,10 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 30px;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const SubTitle = styled.Text`
   font-size: 15px;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
 `;
