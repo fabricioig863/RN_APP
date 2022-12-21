@@ -3,43 +3,17 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import {ThemeProvider} from 'styled-components';
 import Button from './components/Button';
 import {Header} from './components/Header';
-
-const themeDark = {
-  colors: {
-    primary: 'black',
-    onPrimary: 'white',
-    secondary: 'red',
-    onSecondary: 'black',
-  },
-};
-
-const themeLight = {
-  colors: {
-    primary: 'white',
-    onPrimary: 'black',
-    secondary: 'blue',
-    onSecondary: 'black',
-  },
-};
+import {themeDark} from './constants/styles/themes/dark';
+import {themeLight} from './constants/styles/themes/light';
+import useAppearence from './hooks/useAppearence';
 
 const App = () => {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
+  const {theme} = useAppearence();
   return (
-    <ThemeProvider theme={theme === 'dark' ? themeDark : themeLight}>
+    <ThemeProvider theme={theme}>
       <SafeAreaView style={style.container}>
         <Header title="Bem Vindo!" name="Fabricio" />
-        <Button
-          onPress={() =>
-            setTheme(old => {
-              if (old === 'light') {
-                return 'dark';
-              } else {
-                return 'light';
-              }
-            })
-          }
-        />
+        <Button onPress={() => {}} />
       </SafeAreaView>
     </ThemeProvider>
   );
