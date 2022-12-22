@@ -2,6 +2,7 @@ import React from 'react';
 import {ThemeProvider} from 'styled-components';
 import Button from './components/Button';
 import {Header} from './components/Header';
+import TextRN from './components/Text';
 import useAppearence from './hooks/useAppearence';
 import * as S from './styles';
 
@@ -12,6 +13,9 @@ const App = () => {
       <S.Container>
         <Header title="Bem Vindo!" name="Fabricio" />
         <Button onPress={() => {}} />
+        <TextRN typography="h1" color="error">
+          Texto
+        </TextRN>
       </S.Container>
     </ThemeProvider>
   );
