@@ -3,7 +3,7 @@ import {Appearance} from 'react-native';
 import {themeDark} from '../../constants/styles/themes/dark';
 import {themeLight} from '../../constants/styles/themes/light';
 import {colorSchemeProps, Props, themeType} from './types';
-import {Theme} from '../../constants/styles/types';
+import {DefaultTheme} from 'styled-components';
 
 const useAppearence = (): Props => {
   const [currentTheme, setCurrentTheme] = useState<themeType>(
@@ -20,7 +20,8 @@ const useAppearence = (): Props => {
 
   // usamos o useMemo para armazenar o nosso thema
   const theme = useMemo(() => {
-    const theme: Theme = currentTheme === 'light' ? themeLight : themeDark;
+    const theme: DefaultTheme =
+      currentTheme === 'light' ? themeLight : themeDark;
     return theme;
   }, [currentTheme]);
 

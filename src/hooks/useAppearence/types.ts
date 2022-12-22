@@ -1,9 +1,10 @@
 import { ColorSchemeName } from "react-native";
+import { DefaultTheme } from "styled-components";
 
 export type themeType = 'light'| 'dark'
 
 export interface Props {
-  theme: object;
+  theme: DefaultTheme;
   currentTheme: themeType;
 }
 

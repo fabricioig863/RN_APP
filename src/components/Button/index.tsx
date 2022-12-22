@@ -8,7 +8,7 @@ const Button = ({onPress}: ButtonProps) => {
   return (
     <ButtonRN
       title="change theme"
-      color={theme.colors.secondary}
+      color={theme.colors.primary.main}
       onPress={onPress}
     />
   );
