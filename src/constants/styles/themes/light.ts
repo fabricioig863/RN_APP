@@ -6,7 +6,7 @@ export const themeLight: DefaultTheme = {
   colors: {
     primary: {
       main: Colors.brand04,
-      onMain: Colors.white,
+      onMain: Colors.black,
     },
     secondary: {
       main: Colors.brand01,

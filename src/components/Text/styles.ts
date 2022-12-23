@@ -5,9 +5,13 @@ type ContainerProps = Required<Pick<Props, 'color' | 'typography'>>;
 
 export const Container = styled.Text<ContainerProps>`
   color: ${({ theme, color }) => {
-    return theme.colors[color].main;
+    return theme.colors[color].onMain;
   }};
   font-size: ${({ theme, typography }) => {
     return theme.typography[typography].fontSize;
   }}px;
+
+  font-family: ${({ theme, typography }) => {
+    return theme.typography[typography].fontFamily;
+  }};
 `;

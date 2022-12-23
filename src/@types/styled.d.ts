@@ -2,9 +2,16 @@ import 'styled-components'
 
 declare module 'styled-components' {
 
-  export interface ColorType {
+  export interface ColorsTypeProps {
     main: string;
     onMain: string;
+  }
+  export interface ColorType {
+    primary: ColorsTypeProps;
+    secondary: ColorsTypeProps;
+    background: ColorsTypeProps;
+    error: ColorsTypeProps;
+    surface: ColorsTypeProps;
   }
 
   export type ColorsType =
@@ -14,16 +21,9 @@ declare module 'styled-components' {
   | 'error'
   | 'surface';
 
-  export interface PalletteType {
-    primary: ColorType;
-    secondary: ColorType;
-    background: ColorType;
-    error: ColorType;
-    surface: ColorType;
-  }
 
   export interface TypographyProps {
-    fontFamily?: string;
+    fontFamily: string;
     fontSize: number;
   }
 
@@ -43,6 +43,7 @@ declare module 'styled-components' {
     overline: TypographyProps;
   }
 
+  // Qual a dieferença entre type e interface??
   export type TypographyType =
     | 'h1'
     | 'h2'
@@ -59,7 +60,7 @@ declare module 'styled-components' {
     | 'overline';
 
   export interface DefaultTheme {
-    colors: PalletteType;
+    colors: ColorType;
     typography: Typography;
  }
 }

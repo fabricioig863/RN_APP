@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  background-color: ${({ theme }) => theme.colors.primary.main};
+  background-color: ${({ theme }) => theme.colors.primary.onMain};
   border-width: 4px;
   border-color: ${({theme }) => theme.colors.secondary.main};
   border-radius: 4px;
@@ -12,10 +12,10 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 15px;
-  color: ${({theme}) => theme.colors.primary.onMain};
+  color: ${({theme}) => theme.colors.background.main};
 `;
 
 export const SubTitle = styled.Text`
   font-size: 30px;
-  color: ${({ theme }) => theme.colors.primary.onMain};
+  color: ${({ theme }) => theme.colors.background.main};
 `;

@@ -13,7 +13,7 @@ const App = () => {
       <S.Container>
         <Header title="Bem Vindo!" name="Fabricio" />
         <Button onPress={() => {}} />
-        <TextRN typography="h1" color="error">
+        <TextRN typography="h3" color="primary">
           Texto
         </TextRN>
       </S.Container>

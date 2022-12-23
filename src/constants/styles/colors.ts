@@ -1,4 +1,4 @@
-export const white = '#fff';
+export const white = '#ffffff';
 export const black = '#000';
 export const gray = '#ccc';
 export const red = '#D93936';
