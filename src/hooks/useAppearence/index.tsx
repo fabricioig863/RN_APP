@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useState, useMemo} from 'react';
-import {Appearance} from 'react-native';
+import {Appearance, EventEmitter} from 'react-native';
 import {themeDark} from '../../constants/styles/themes/dark';
 import {themeLight} from '../../constants/styles/themes/light';
 import {colorSchemeProps, Props, themeType} from './types';
@@ -27,9 +27,9 @@ const useAppearence = (): Props => {
 
   // Para monitorar a cor que foi trocada.
   useEffect(() => {
-    Appearance.addChangeListener(handleChangeAppearance);
+    const event = Appearance.addChangeListener(handleChangeAppearance);
 
-    return () => Appearance.addChangeListener(handleChangeAppearance).remove();
+    return () => event.remove();
   }, [handleChangeAppearance]);
 
   return {currentTheme, theme};

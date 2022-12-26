@@ -6,7 +6,7 @@ export const themeLight: DefaultTheme = {
   colors: {
     primary: {
       main: Colors.brand04,
-      onMain: Colors.black,
+      onMain: Colors.white,
     },
     secondary: {
       main: Colors.brand01,
@@ -21,7 +21,7 @@ export const themeLight: DefaultTheme = {
       onMain: Colors.black,
     },
     surface: {
-      main: Colors.neutrais,
+      main: Colors.black,
       onMain: Colors.white,
     }
   },

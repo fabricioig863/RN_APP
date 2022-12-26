@@ -2,7 +2,7 @@ import React from 'react';
 import {Props} from './types';
 import * as S from './styles';
 
-const TextRN = ({children, color, typography, ...rest}: Props) => {
+const Text = ({children, color, typography, ...rest}: Props) => {
   return (
     <S.Container
       color={color || 'surface'}
@@ -13,4 +13,4 @@ const TextRN = ({children, color, typography, ...rest}: Props) => {
   );
 };
 
-export default TextRN;
+export default Text;

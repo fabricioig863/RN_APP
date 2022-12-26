@@ -1,17 +1,31 @@
-import React from 'react';
-import {Button as ButtonRN, useColorScheme} from 'react-native';
-import {useTheme} from 'styled-components';
+import React, {useMemo} from 'react';
 import {ButtonProps} from './types';
+import {useTheme} from 'styled-components';
+import * as S from './styles';
 
-const Button = ({onPress}: ButtonProps) => {
-  const theme = useTheme();
+export const Button = ({
+  children,
+  mode = 'contained',
+  color = 'primary',
+  loading,
+  onPress,
+  ...rest
+}: ButtonProps) => {
+  const {colors} = useTheme();
+
+  const colorByMode = useMemo(() => {
+    return mode === 'outlined' ? colors[color].main : colors[color].onMain;
+  }, [mode, color, colors]);
+
   return (
-    <ButtonRN
-      title="change theme"
-      color={theme.colors.primary.main}
+    <S.Container
+      mode={mode}
+      borderColor={colors[color].main}
+      color={colors[color].main}
       onPress={onPress}
-    />
+      {...rest}>
+      <S.Title color={colorByMode}>{children}</S.Title>
+      {loading && <S.Loading size={15} color={colorByMode} />}
+    </S.Container>
   );
 };
-
-export default Button;
