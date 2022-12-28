@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import {ThemeProvider} from 'styled-components';
 import {Button} from './components/Button';
 import {Icon} from './components/Icon';
+import Separator from './components/Separator';
 import useAppearence from './hooks/useAppearence';
 import * as S from './styles';
 
@@ -18,6 +19,7 @@ const App = () => {
             flexWrap: 'wrap',
           }}>
           <Icon icon="skull" size={150} />
+          <Separator width={10} />
           <Icon icon="hacker" size={150} />
         </View>
         <Button color="primary" loading mode="contained">
