@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useState, useMemo} from 'react';
-import {Appearance, EventEmitter} from 'react-native';
+import {Appearance} from 'react-native';
 import {themeDark} from '../../constants/styles/themes/dark';
 import {themeLight} from '../../constants/styles/themes/light';
 import {colorSchemeProps, Props, themeType} from './types';
