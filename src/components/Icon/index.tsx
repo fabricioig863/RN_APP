@@ -3,7 +3,7 @@ import * as S from './styles';
 import {IconProps} from './types';
 import Icons from '../../constants/icons';
 
-export const Icon = ({
+const Icon = ({
   icon,
   size = 20,
   activeColor,
@@ -20,3 +20,5 @@ export const Icon = ({
   }
   return <S.Container size={size} source={Icons[icon]} style={style} />;
 };
+
+export default Icon;

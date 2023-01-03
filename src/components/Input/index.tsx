@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import {TouchableOpacity} from 'react-native';
 import {useTheme} from 'styled-components';
-import {Icon} from '../Icon';
+import Icon from '@/components/Icon';
 import * as S from './styles';
 import {InputProps, InputValueRef} from './types';
 

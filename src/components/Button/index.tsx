@@ -3,7 +3,7 @@ import {ButtonProps} from './types';
 import {useTheme} from 'styled-components';
 import * as S from './styles';
 
-export const Button = ({
+const Button = ({
   children,
   mode = 'contained',
   color = 'primary',
@@ -29,3 +29,5 @@ export const Button = ({
     </S.Container>
   );
 };
+
+export default Button;

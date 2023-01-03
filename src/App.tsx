@@ -1,12 +1,14 @@
 import React, {useRef} from 'react';
 import {Alert} from 'react-native';
 import {ThemeProvider} from 'styled-components';
-import {Button} from './components/Button';
-import {Icon} from './components/Icon';
-import Input from './components/Input';
-import {InputValueRef} from './components/Input/types';
-import Separator from './components/Separator';
+
+import Button from '@/components/Button';
+import Icon from '@/components/Icon';
+import Input from '@/components/Input';
+import Separator from '@/components/Separator';
 import useAppearence from './hooks/useAppearence';
+
+import {InputValueRef} from './components/Input/types';
 import * as S from './styles';
 
 const App = () => {
