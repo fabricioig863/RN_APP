@@ -90,7 +90,7 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
   ]);
 
   return (
-    <S.Container {...rest}>
+    <S.Container>
       {!!label && (
         <S.Label color="surface" typography="body3">
           {label}
@@ -107,6 +107,7 @@ const Input: React.ForwardRefRenderFunction<InputValueRef, InputProps> = (
             setText(value);
             onChangeText?.(value);
           }}
+          {...(rest as any)}
           secureTextEntry={secureTextEntry && !passwordVisible}
         />
         {iconPosition === 'right' && renderIcon()}
