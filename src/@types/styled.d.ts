@@ -2,6 +2,23 @@ import 'styled-components'
 
 declare module 'styled-components' {
 
+  export interface Spacing {
+    ty: number;
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+    xxl: number;
+    xxxl: number;
+  }
+
+  export interface Border {
+    radius: {
+      xm: number;
+      sm: number;
+    }
+  }
   export interface ColorsTypeProps {
     main: string;
     onMain: string;
@@ -59,8 +76,10 @@ declare module 'styled-components' {
     | 'caption'
     | 'overline';
 
-  export interface DefaultTheme {
-    colors: ColorType;
-    typography: Typography;
- }
+    export interface DefaultTheme {
+      colors: ColorType;
+      typography: Typography;
+      spacing: Spacing;
+      borders: Border;
+  }
 }

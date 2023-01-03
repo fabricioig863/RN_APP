@@ -26,8 +26,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <S.Container>
         <S.Content>
-          <Icon icon="skull" size={150} />
-          <Separator width={10} />
           <Icon icon="hacker" size={150} />
         </S.Content>
         <S.ContainerInput>

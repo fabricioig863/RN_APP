@@ -12,6 +12,7 @@ export const Content  = styled.View`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  margin-top: ${({ theme }) => theme.spacing.xxl}px;
 `;
 
 export const ContainerInput = styled.View``;
