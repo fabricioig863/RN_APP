@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import useAppearence from './hooks/useAppearence';
-import Router from './navigation';
+import Router from './router';
 
 const App = () => {
   const {theme} = useAppearence();
