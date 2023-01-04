@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {Alert} from 'react-native';
 import {ThemeProvider} from 'styled-components';
 
@@ -26,34 +27,36 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <S.Container>
-        <S.Content>
-          <Icon icon="hacker" size={150} />
-        </S.Content>
-        <S.ContainerInput>
-          <Input
-            placeholder="jhondoe@gmail.com"
-            ref={refEmail}
-            icon="skull"
-            label="E-mail"
-          />
-          <Separator height={10} />
-          <Input
-            placeholder="Digite sua senha"
-            ref={refPassword}
-            secureTextEntry
-            label="Password"
-          />
-        </S.ContainerInput>
-        <Button
-          onPress={handlePress}
-          color="primary"
-          loading={false}
-          mode="contained">
-          Login
-        </Button>
-        <Separator />
-      </S.Container>
+      <NavigationContainer>
+        <S.Container>
+          <S.Content>
+            <Icon icon="hacker" size={150} />
+          </S.Content>
+          <S.ContainerInput>
+            <Input
+              placeholder="jhondoe@gmail.com"
+              ref={refEmail}
+              icon="skull"
+              label="E-mail"
+            />
+            <Separator height={10} />
+            <Input
+              placeholder="Digite sua senha"
+              ref={refPassword}
+              secureTextEntry
+              label="Password"
+            />
+          </S.ContainerInput>
+          <Button
+            onPress={handlePress}
+            color="primary"
+            loading={false}
+            mode="contained">
+            Login
+          </Button>
+          <Separator />
+        </S.Container>
+      </NavigationContainer>
     </ThemeProvider>
   );
 };
