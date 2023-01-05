@@ -24,14 +24,14 @@ const Login = () => {
           secureTextEntry
           label="Password"
         />
-        <Button
-          color="primary"
-          loading={false}
-          mode="contained"
-          onPress={() => navigation.navigate('Onboarding')}>
-          Login
-        </Button>
       </S.ContainerInput>
+      <Button
+        color="primary"
+        loading={false}
+        mode="contained"
+        onPress={() => navigation.navigate('Onboarding')}>
+        Login
+      </Button>
       <Separator />
     </S.Container>
   );
