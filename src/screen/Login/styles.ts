@@ -2,8 +2,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
+  padding: 20px;
   background-color: ${({ theme }) => theme.colors.background.main};
-  margin: 20px;
   justify-content: space-between;
 `;
 
@@ -14,4 +14,6 @@ export const Content  = styled.View`
   margin-top: ${({ theme }) => theme.spacing.xxl}px;
 `;
 
-export const ContainerInput = styled.View``;
+export const ContainerInput = styled.View`
+  padding: 20px;
+`;
