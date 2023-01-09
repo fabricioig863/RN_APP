@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Button from '@/components/Button';
 import Icon from '@/components/Icon';
 import Input from '@/components/Input';
@@ -16,21 +17,18 @@ const Onboarding = () => {
       <S.Content>
         <Icon icon="hacker" size={150} />
       </S.Content>
-      <S.ContainerInput>
-        <Input placeholder="jhondoe@gmail.com" icon="skull" label="E-mail" />
-        <Separator height={10} />
-        <Input
-          placeholder="Digite sua senha"
-          secureTextEntry
-          label="Password"
-        />
-      </S.ContainerInput>
+      <Button
+        color="error"
+        mode="outlined"
+        onPress={() => navigation.popToTop()}>
+        popTop
+      </Button>
       <Button
         color="primary"
         loading={false}
         mode="contained"
-        onPress={() => navigation.navigate('Onboarding')}>
-        Login
+        onPress={() => navigation.push('Login')}>
+        Push
       </Button>
       <Separator />
     </S.Container>

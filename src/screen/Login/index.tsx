@@ -29,7 +29,7 @@ const Login = () => {
         color="primary"
         loading={false}
         mode="contained"
-        onPress={() => navigation.navigate('Onboarding')}>
+        onPress={() => navigation.push('Onboarding')}>
         Login
       </Button>
       <Separator />
