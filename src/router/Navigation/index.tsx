@@ -1,18 +1,18 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import {propsNavigationStack} from '../types';
 
-import Login from '@/screen/Login';
+import Home from '@/screen/Home';
 import Onboarding from '@/screen/Onboarding';
 
-const Stack = createNativeStackNavigator<propsNavigationStack>();
+const Stack = createStackNavigator<propsNavigationStack>();
 
 export default function () {
   return (
     <Stack.Navigator
-      initialRouteName="Login"
+      initialRouteName="Home"
       screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Onboarding" component={Onboarding} />
     </Stack.Navigator>
   );
