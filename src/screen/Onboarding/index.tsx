@@ -1,38 +1,42 @@
 import React from 'react';
 import Button from '@/components/Button';
-import Icon from '@/components/Icon';
-import Input from '@/components/Input';
-import Separator from '@/components/Separator';
-import {useNavigation} from '@react-navigation/native';
 import * as S from './styles';
+import {Text} from 'react-native';
+import Separator from '@/components/Separator';
 
-import {propsStack} from '@/router/types';
+const Onboarding = ({navigation, route}) => {
+  const {profile} = route.params;
 
-const Onboarding = () => {
-  const navigation = useNavigation<propsStack>();
+  const handleNavigation = () => {
+    return navigation.goBack();
+  };
 
+  const handleUpdate = () => {
+    return navigation.setParams({
+      profile: {
+        name: 'Luiza Santini',
+      },
+    });
+  };
+
+  const handleParamsNavigateGoback = () => {
+    return navigation.navigate('Home', {
+      profile: {
+        selectedUser: 'Pedro Henrique',
+      },
+    });
+  };
   return (
     <S.Container>
       <S.Content>
-        <Icon icon="hacker" size={150} />
+        <Button onPress={handleNavigation}>Onboarding</Button>
+        <S.ContentText>
+          <Text>{profile.name}</Text>
+        </S.ContentText>
+        <Button onPress={handleUpdate}>Update state</Button>
+        <Separator height={20} />
+        <Button onPress={handleParamsNavigateGoback}>Voltando</Button>
       </S.Content>
-      <S.ContainerInput>
-        <Input placeholder="jhondoe@gmail.com" icon="skull" label="E-mail" />
-        <Separator height={10} />
-        <Input
-          placeholder="Digite sua senha"
-          secureTextEntry
-          label="Password"
-        />
-      </S.ContainerInput>
-      <Button
-        color="primary"
-        loading={false}
-        mode="contained"
-        onPress={() => navigation.navigate('Onboarding')}>
-        Login
-      </Button>
-      <Separator />
     </S.Container>
   );
 };
