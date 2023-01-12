@@ -3,7 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import useAppearence from './hooks/useAppearence';
-import Routes from './router/navigation';
+import Routes from './router';
 
 const App = () => {
   const {theme} = useAppearence();
