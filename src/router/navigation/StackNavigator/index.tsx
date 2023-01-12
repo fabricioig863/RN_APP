@@ -1,13 +1,13 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {propsNavigationStack} from '../types';
+import {propsNavigationStack} from './types';
 
 import Home from '@/screen/Home';
 import Onboarding from '@/screen/Onboarding';
 
 const Stack = createStackNavigator<propsNavigationStack>();
 
-export default function () {
+const StackNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
@@ -16,4 +16,6 @@ export default function () {
       <Stack.Screen name="Onboarding" component={Onboarding} />
     </Stack.Navigator>
   );
-}
+};
+
+export default StackNavigator;

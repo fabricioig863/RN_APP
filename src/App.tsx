@@ -3,7 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import useAppearence from './hooks/useAppearence';
-import Router from './router/Navigation';
+import Routes from './router/navigation';
 
 const App = () => {
   const {theme} = useAppearence();
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <Router />
+        <Routes />
       </NavigationContainer>
     </ThemeProvider>
   );
