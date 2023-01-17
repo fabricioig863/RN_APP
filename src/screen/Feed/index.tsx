@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from './styles';
 
-const Solutions = () => {
+const Feed = () => {
   return (
     <S.Container>
-      <S.Title>Solutions</S.Title>
+      <S.Title>Feed</S.Title>
     </S.Container>
   );
 };
 
-export default Solutions;
+export default Feed;
