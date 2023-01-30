@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
@@ -7,6 +7,7 @@ export const Container = styled.View`
   background-color: black;
 `;
 
-export const Content = styled.View`
+export const Content  = styled.View`
   width: 80%;
 `;
+

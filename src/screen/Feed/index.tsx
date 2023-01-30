@@ -10,7 +10,7 @@ const Feed = ({navigation}) => {
   return (
     <S.Container>
       <S.Content>
-        <Button color="surface" onPress={handleNavigateStories}>
+        <Button color="background" onPress={handleNavigateStories}>
           on click me
         </Button>
       </S.Content>

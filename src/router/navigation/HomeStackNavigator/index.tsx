@@ -1,10 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {propsNavigationStack} from './types';
 import Feed from '@/screen/Feed';
 import Stories from '@/screen/Stories';
 
-const Stack = createStackNavigator<propsNavigationStack>();
+const Stack = createStackNavigator();
 
 const HomeStackNavigator = () => {
   return (

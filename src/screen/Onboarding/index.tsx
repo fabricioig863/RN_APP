@@ -9,7 +9,9 @@ const Onboarding = ({navigation}) => {
   return (
     <S.Container>
       <S.Content>
-        <Button onPress={handleNavigate}>voltando</Button>
+        <Button color="error" onPress={handleNavigate}>
+          Voltando
+        </Button>
       </S.Content>
     </S.Container>
   );

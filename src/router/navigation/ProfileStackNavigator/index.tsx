@@ -1,17 +1,16 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {propsNavigationStack} from './types';
-import Profile from '@/screen/Profile';
 import Onboarding from '@/screen/Onboarding';
+import Post from '@/screen/Post';
 
-const Stack = createStackNavigator<propsNavigationStack>();
+const Stack = createStackNavigator();
 
 const ProfileStackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Perfil"
       screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Perfil" component={Post} />
       <Stack.Screen name="Onboarding" component={Onboarding} />
     </Stack.Navigator>
   );
