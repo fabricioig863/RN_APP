@@ -1,8 +1,11 @@
 import React from 'react';
 import Button from '@/components/Button';
 import * as S from './styles';
+import {useNavigation} from '@react-navigation/native';
 
-const Onboarding = ({navigation}) => {
+const Onboarding = () => {
+  const navigation = useNavigation();
+
   const handleNavigate = () => {
     navigation.goBack();
   };

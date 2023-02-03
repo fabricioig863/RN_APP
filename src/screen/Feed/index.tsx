@@ -1,18 +1,26 @@
 import React from 'react';
 import Button from '@/components/Button';
 import * as S from './styles';
+import Separator from '@/components/Separator';
+import {useNavigation} from '@react-navigation/native';
 
-const Feed = ({navigation}) => {
-  const handleNavigateStories = () => {
-    navigation.navigate('Stories');
+const Feed = ({}) => {
+  const navigation = useNavigation();
+
+  const handlePressToPost = () => {
+    navigation.navigate('Stories', {
+      name: 'Fabricio',
+    });
   };
 
   return (
     <S.Container>
       <S.Content>
-        <Button color="background" onPress={handleNavigateStories}>
-          on click me
+        <Separator height={20} />
+        <Button color="background" onPress={handlePressToPost}>
+          Vai para a Stories
         </Button>
+        <S.Title></S.Title>
       </S.Content>
     </S.Container>
   );

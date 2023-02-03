@@ -17,7 +17,7 @@ const BottomTabs = () => {
         }}
       />
       <BottomTab.Screen
-        name="Profile"
+        name="profile"
         component={ProfileStackNavigator}
         options={{
           tabBarIcon: () => <Icon icon="money" />,

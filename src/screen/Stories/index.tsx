@@ -1,8 +1,13 @@
 import Button from '@/components/Button';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
 import * as S from './styles';
 
-const Stories = ({navigation}) => {
+const Stories = () => {
+  const route = useRoute();
+  console.log(route.params);
+  const navigation = useNavigation();
+
   const handleGoback = () => {
     navigation.goBack();
   };
