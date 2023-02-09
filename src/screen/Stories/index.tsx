@@ -4,8 +4,8 @@ import React from 'react';
 import * as S from './styles';
 
 const Stories = () => {
-  const route = useRoute();
-  console.log(route.params);
+  const route = useRoute<StoriesHomeStackRouteProps>();
+  console.log(route.params.name);
   const navigation = useNavigation();
 
   const handleGoback = () => {

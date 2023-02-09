@@ -1,10 +1,12 @@
 import React from 'react';
 import Button from '@/components/Button';
 import * as S from './styles';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
 const Onboarding = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+  console.log(route);
 
   const handleNavigate = () => {
     navigation.goBack();

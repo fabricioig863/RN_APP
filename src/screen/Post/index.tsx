@@ -9,7 +9,7 @@ const Post = () => {
   console.log(route.params);
 
   const handleNavigate = () => {
-    navigation.navigate('Onboarding');
+    navigation.navigate('onboarding');
   };
   return (
     <S.Container>

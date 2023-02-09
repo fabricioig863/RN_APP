@@ -3,15 +3,15 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Feed from '@/screen/Feed';
 import Stories from '@/screen/Stories';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<HomeStackParamList>();
 
 const HomeStackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Feed"
+      initialRouteName="feed"
       screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Feed" component={Feed} />
-      <Stack.Screen name="Stories" component={Stories} />
+      <Stack.Screen name="feed" component={Feed} />
+      <Stack.Screen name="stories" component={Stories} />
     </Stack.Navigator>
   );
 };

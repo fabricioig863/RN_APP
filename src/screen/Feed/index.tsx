@@ -5,11 +5,16 @@ import Separator from '@/components/Separator';
 import {useNavigation} from '@react-navigation/native';
 
 const Feed = ({}) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StartBottomTabNavigationProp>();
 
   const handlePressToPost = () => {
-    navigation.navigate('Stories', {
-      name: 'Fabricio',
+    navigation.navigate('profile');
+
+    navigation.navigate('home', {
+      screen: 'stories',
+      params: {
+        name: 'Fabricio',
+      },
     });
   };
 
